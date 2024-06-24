@@ -1,6 +1,6 @@
 #Scenario 1: 
-#- Show the number of students within specific study time groups. 
-#- Order the list by study time group descending. 
+#- Show the number of students within each study time group. 
+#- Order the list in descending order, by number of students within each study time group. 
 #- A study time group is defined as the following. For example, if a student studies between 0-4 hours weekly, they are placed in the 0 hour group. If a student studies 5-9 hours weekly, they are placed in the 5 hour group. Etc.
 
 SELECT 
@@ -12,10 +12,10 @@ ORDER BY StudyTimeGroup DESC
 
 
 #Scenario 2:
-#- Show StudentId, StudyTimeWeekly, Extracurricular, GradeClass, high_achiever from the student_performance_data table
-#- Display high_achiever as a boolean 0 or 1
+#- Show StudentId, StudyTimeWeekly, Extracurricular, GradeClass, high_achiever for all students.
 #- Sort the table such that it shows the high achievers first
 #- A high achiever is defined as student who have a weekly study time of 15 hours or more, participates in extracurricular activites, and have a grade class of A.
+#- Display high_achiever as a boolean 0 or 1
 
 SELECT 
 	StudentId, 
@@ -31,9 +31,10 @@ FROM student_performance_data
 ORDER BY high_achiever DESC
 
 
-#Scenario 3: Students who achieve a grade class of A or B are awarded a $20 book voucher. Students who achieve a grade class of C and below are awarded a $10 voucher.
+#Scenario 3: 
+#- Students who achieve a grade class of A or B are awarded a $20 book voucher. Students who achieve a grade class of C and below are awarded a $10 voucher.
 #- Assign each student "group 1" if they are awarded a $20 voucher, and "group 2" if they are awarded a $10 voucher. 
-#- add up the total voucher costs for each group
+#- Add up the total voucher costs for each group
 
 SELECT 
 	voucher_status, 
